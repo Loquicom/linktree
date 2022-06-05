@@ -1,0 +1,208 @@
+/* --- General --- */
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+main {
+    margin-top: 0 !important;
+    padding-top: 1em !important;
+}
+
+footer {
+    padding: 0 !important;
+    margin-left: 1em !important;
+    margin-bottom: 0.5em;
+    opacity: 0.6;
+    font-size: 0.7em;
+}
+
+.center {
+    text-align: center;
+}
+
+/* --- Navbar --- */
+
+#logo {
+    max-height: 40px;
+    margin-left: 1em;
+    margin-right: -1em;
+}
+
+@media (max-width: 576px) {
+    #logo-container {
+        display: none;
+    }
+}
+
+#page-title {
+    margin-left: -3em;
+}
+
+/* --- Parameter --- */
+
+#parameter {
+    cursor: pointer;
+    font-size: 1.5em;
+    margin-right: 1em;
+}
+
+#parameter:hover {
+    opacity: 0.8;
+}
+
+#parameter-switch {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#parameter-switch div {
+    margin-bottom: 1em;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.close:hover {
+    opacity: 0.8;
+}
+
+#parameter-reset-button {
+    cursor: pointer;
+    color: var(--primary);
+}
+
+#parameter-reset-button:hover {
+    text-decoration: underline;
+    color: var(--primary-hover);
+}
+
+@media (min-width: 992px) {
+    #parameter-reset {
+        margin-top: -4em;
+        max-width: 75%;
+    }
+}
+
+/* --- Title --- */
+
+#title {
+    margin: 0.5em;
+}
+
+#title h3 {
+    margin: 0;
+}
+
+#profil {
+    border-radius: 50%;
+    max-width: 15%;
+}
+
+@media (max-width: 992px) {
+    #profil {
+        max-width: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    #profil {
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 576px) {
+    #profil {
+        max-width: 30%;
+    }
+
+    #title {
+        margin: 1em;
+    }
+}
+
+/* --- Presentation card --- */
+
+#presentation-card {
+    width: 70%;
+    margin: auto;
+}
+
+#presentation-card article {
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding-top: 2.8em;
+    padding-bottom: 2.8em;
+    position: relative;
+}
+
+#konami-helper {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    opacity: 0.4;
+    font-size: 0.5em;
+}
+
+/* --- Link --- */
+
+.link {
+    text-align: center;
+    padding: 0;
+    margin: 1em;
+}
+
+.link a {
+    width: 80%;
+    max-height: 70px;
+    max-width: 800px;
+}
+
+.link.animation a {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.link.animation a .content {
+    transform: translateZ(20px);
+    color: initial;
+}
+
+.link.animation[data-color=amber] a:hover .content,
+.link.animation[data-color=lime] a:hover .content,
+.link.animation[data-color=yellow] a:hover .content {
+    color: black;
+}
+
+.link.no-animation a {
+    color: initial;
+}
+
+.link.no-animation a .content {
+    color: initial;
+}
+
+.link.no-animation a:hover {
+    border-color: initial;
+}
+
+.link.no-animation a:hover .content {
+    color: var(--primary-hover);
+}
+
+/* --- Link background animation --- */
+
+.animation a {
+    background-repeat: repeat-x;
+    transition: background-position .2s ease;
+    background-image: var(--link-button-background);
+}
+
+.animation a:hover {
+    background-position: 100% 55%;
+}
