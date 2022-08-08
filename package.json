@@ -1,0 +1,23 @@
+{
+  "name": "linktree",
+  "version": "1.0.0",
+  "description": "A linktree website",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.loquico.me/Loquicom/linktree.git"
+  },
+  "keywords": [
+    "linktree",
+    "loquicom"
+  ],
+  "author": "Loquicom",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}
