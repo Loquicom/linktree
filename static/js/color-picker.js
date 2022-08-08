@@ -59,8 +59,8 @@ function getCurrentColor() {
                 getColorPicker(color)?.classList.add('picked');
                 data.picked?.classList.remove('picked');
                 data.picker?.classList.remove('picked');
-                // Load the new CSS file
-                document.querySelector('#color-style').href = 'static/css/color/pico-' + color + '.css';
+                // Change css color
+                document.querySelector('#color-style').innerHTML = getCssColor(getColorCodes(color))
                 // Change the color on the link
                 document.querySelectorAll('.link').forEach((elt) => elt.setAttribute('data-color', color));
                 // Set the new color in localStorage
