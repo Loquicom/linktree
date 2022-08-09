@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Linktree">
     <meta property="og:description" content="Linktree website">
 
     <link rel="stylesheet" href="static/css/pico.min.css">
     <link rel="stylesheet" href="static/css/theme-switcher.css">
-    <link rel="stylesheet" href="static/css/color-picker.css">
     <link rel="stylesheet" href="static/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/legal.css">
 
     <style id="color-style"></style>
 
@@ -31,7 +31,7 @@
         </ul>
         <ul>
             <li>
-                <span id="parameter" class="mdi mdi-cog"></span>
+                <span id="back-nav" class="mdi mdi-close back"></span>
             </li>
         </ul>
     </nav>
@@ -39,148 +39,11 @@
     <main class="container">
         <!-- Title -->
         <section id="title" class="center">
-                <img id="profil" src="static/img/profil.webp" alt="Photo de profil">
-                <h3>Titre</h3>
+            <h3>Mentions l&eacute;gales</h3>
         </section>
-        <!-- Presentation card -->
-        <section id="presentation-card">
-            <figure id="color-picked" class="color-grid">
-                <div data-color="red">&xdtri;</div>
-                <div data-color="pink">&xdtri;</div>
-                <div data-color="purple">&xdtri;</div>
-                <div data-color="deep-purple">&xdtri;</div>
-                <div data-color="indigo">&xdtri;</div>
-                <div data-color="blue">&xdtri;</div>
-                <div data-color="light-blue">&xdtri;</div>
-                <div data-color="cyan">&xdtri;</div>
-                <div data-color="teal">&xdtri;</div>
-                <div data-color="green">&xdtri;</div>
-                <div data-color="light-green">&xdtri;</div>
-                <div data-color="lime">&xdtri;</div>
-                <div data-color="yellow">&xdtri;</div>
-                <div data-color="amber">&xdtri;</div>
-                <div data-color="orange">&xdtri;</div>
-                <div data-color="deep-orange">&xdtri;</div>
-                <div data-color="grey">&xdtri;</div>
-                <div data-color="blue-grey">&xdtri;</div>
-            </figure>
-            <figure id="color-picker" class="color-grid">
-                <button data-color="red" aria-label="Activate red theme"></button>
-                <button data-color="pink" aria-label="Activate pink theme"></button>
-                <button data-color="purple" aria-label="Activate purple theme"></button>
-                <button data-color="deep-purple" aria-label="Activate deep-purple theme"></button>
-                <button data-color="indigo" aria-label="Activate indigo theme"></button>
-                <button data-color="blue" aria-label="Activate blue theme"></button>
-                <button data-color="light-blue" aria-label="Activate light-blue theme"></button>
-                <button data-color="cyan" aria-label="Activate cyan theme"></button>
-                <button data-color="teal" aria-label="Activate teal theme"></button>
-                <button data-color="green" aria-label="Activate green theme"></button>
-                <button data-color="light-green" aria-label="Activate light-green theme"></button>
-                <button data-color="lime" aria-label="Activate lime theme"></button>
-                <button data-color="yellow" aria-label="Activate yellow theme"></button>
-                <button data-color="amber" aria-label="Activate amber theme"></button>
-                <button data-color="orange" aria-label="Activate orange theme"></button>
-                <button data-color="deep-orange" aria-label="Activate deep-orange theme"></button>
-                <button data-color="grey" aria-label="Activate grey theme"></button>
-                <button data-color="blue-grey" aria-label="Activate blue-grey theme"></button>
-            </figure>
-            <article>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porttitor felis vitae erat accumsan, nec molestie dolor condimentum. Morbi feugiat commodo elit, consectetur elementum mi tempus non. Morbi nec bibendum turpis. Etiam blandit enim massa, id porta elit placerat quis. Cras a nibh placerat, cursus nisi sit amet, egestas massa.
-                <span id="konami-helper">&uarr;&uarr;&darr;&darr;&larr;&rarr;&larr;&rarr;BA</span>
-            </article>
-        </section>
-        <!-- Links -->
-        <section id="links">
-            <div class="link animation">
-                <a href="https://linkedin.com" target="_self" role="button" class="outline" data-tilt data-tilt-reverse="true">
-                    <div class="content">
-                        <span class="mdi mdi-linkedin"></span>
-                        LinkedIn
-                    </div>
-                </a>
-            </div>
-            <div class="link animation">
-                <a href="https://github.com" target="_self" role="button" class="outline" data-tilt data-tilt-reverse="true">
-                    <div class="content">
-                        <span class="mdi mdi-github"></span>
-                        Github
-                    </div>
-                </a>
-            </div>
-        </section>
-        <!-- Legal -->
-        <section id="legal">
-            <span>Mentions l&eacute;gales</span>
-        </section>
-    </main>
-
-    <footer>
-        Designed by Loquicom 2022, with <a href="https://picocss.com" target="_self">Pico CSS</a>, <a href="https://micku7zu.github.io/vanilla-tilt.js/" target="_self">Vanilla-Tilt</a> and <a href="https://materialdesignicons.com/" target="_self">Material Design Icons</a>. Code available <a href="https://github.com/Loquicom/linktree" target="_self">here</a> under MIT
-    </footer>
-
-    <!-- Parameters Dialog -->
-    <dialog id="parameter-dialog">
-        <article>
-            <!-- Title -->
-            <header>
-                <span id="parameter-dialog-close" aria-label="Close" class="close close-dialog"></span>
-                Param&egrave;tres
-            </header>
-            <!-- Description -->
-            <main class="container">
-                <p>
-                    R&eacute;gler les différents param&egrave;tres de la page :
-                    <ul>
-                        <li>Animation : Permet d&apos;activer/d&eacute;sactiver les effets au survol des liens avec la souris</li>
-                        <li>Nouvel onglet : Permet d'ouvrir les liens dans un nouvel onglet (et non dans l'onglet courant)</li>
-                    </ul>
-                    Aucune donn&eacute;e n&apos;est envoy&eacute;e &agrave; un serveur, tout est sauvegard&eacute; localement dans votre navigateur.
-                </p>
-                <!-- Params -->
-                <hr>
-                <div id="parameter-switch" class="grid center">
-                    <div>
-                        <label for="switch-animation">
-                            <input type="checkbox" id="switch-animation" name="switch-animation" role="switch">
-                            <span id="switch-animation-label">Animations</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label for="switch-link">
-                            <input type="checkbox" id="switch-link" name="switch-link" role="switch">
-                            <span id="switch-link-label">Nouvel onglet</span>
-                        </label>
-                    </div>
-                </div>
-                <!-- Close -->
-                <div class="grid">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div>
-                        <button class="close-dialog" aria-label="Valider">Valider</button>
-                    </div>
-                </div>
-                <!-- Reset -->
-                <footer id="parameter-reset">
-                    Pour supprimer vos pr&eacute;f&eacute;rences <span id="parameter-reset-button">cliquer ici</span>
-                </footer>
-            </main>
-        </article>
-    </dialog>
-
-    <!-- Legal Dialogs -->
-    <dialog id="legal-dialog">
-        <article>
-            <!-- Title -->
-            <header>
-                <span id="legal-dialog-close" aria-label="Close" class="close close-dialog"></span>
-                Mentions l&eacute;gales <a href="legal.html" target="_self"><span class="mdi mdi-open-in-new"></span></a>
-            </header>
-            <!-- Description -->
-            <main class="container">
-                <p id="legal-text">     
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus felis enim, pellentesque sit amet posuere id, interdum quis nulla. Sed felis mi, hendrerit eu eros dictum, commodo hendrerit augue. Aliquam ex lacus, laoreet vel enim id, imperdiet mattis metus. Maecenas molestie lacus ut est pellentesque molestie. Proin id sem ac urna fermentum ultrices a non leo. Etiam ut ultricies quam. Praesent sodales, purus eu dapibus fermentum, lorem ligula luctus mi, in vulputate eros justo in lacus.
+        <!-- Legal text -->
+        <section id="legal-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus felis enim, pellentesque sit amet posuere id, interdum quis nulla. Sed felis mi, hendrerit eu eros dictum, commodo hendrerit augue. Aliquam ex lacus, laoreet vel enim id, imperdiet mattis metus. Maecenas molestie lacus ut est pellentesque molestie. Proin id sem ac urna fermentum ultrices a non leo. Etiam ut ultricies quam. Praesent sodales, purus eu dapibus fermentum, lorem ligula luctus mi, in vulputate eros justo in lacus.
 
 Nulla aliquet velit magna, tristique luctus tellus rhoncus non. Sed ac ipsum maximus, cursus mauris quis, tincidunt metus. Sed vestibulum magna vel rhoncus dictum. Vivamus vitae viverra arcu. Vivamus diam nunc, cursus et mattis at, rhoncus non eros. Sed massa lorem, faucibus ut vestibulum tincidunt, imperdiet at purus. Nulla a erat bibendum, pellentesque purus ac, tincidunt orci. Vestibulum lacinia sem et arcu lobortis, eget volutpat purus ornare. Pellentesque ultricies magna ut est ullamcorper varius.
 
@@ -219,24 +82,25 @@ Duis eu mattis tortor. Integer ut est est. Fusce nibh nunc, placerat at feugiat 
 Sed lobortis turpis urna, sit amet bibendum erat accumsan vel. Vestibulum ut vehicula lorem. Duis facilisis accumsan augue nec varius. Sed ultrices tristique mi, porttitor laoreet mauris luctus at. Praesent laoreet lectus felis, vel elementum ipsum viverra quis. Duis maximus feugiat leo vitae porttitor. Suspendisse congue, justo vel iaculis auctor, ante est suscipit tortor, eget mollis neque mi non turpis. Proin viverra, nisl et varius ultrices, mauris risus volutpat nunc, sit amet iaculis metus erat eu eros. Nam eu egestas nibh, sit amet auctor mi. Aliquam erat volutpat. Nunc varius tincidunt tincidunt. In eget fringilla lectus. Proin nibh mi, tincidunt ac lacinia vel, congue eget neque. Nunc vulputate facilisis vestibulum. Sed pharetra, libero eget elementum ultricies, orci magna fringilla mi, sit amet finibus odio ligula eleifend nunc.
 
 Donec vel ante ac massa dapibus rutrum. In hac habitasse platea dictumst. Phasellus vulputate aliquet tincidunt. Phasellus sit amet cursus tellus. Aenean eu sapien justo. Maecenas id purus tempus, tempor tellus vel, iaculis ligula. Curabitur ut consequat leo. Nulla bibendum dolor diam, ut malesuada velit varius cursus. Praesent ultricies rhoncus feugiat. Vivamus egestas sit amet risus ut eleifend. Aenean faucibus justo ac elit feugiat convallis eget in lectus. Curabitur mattis tincidunt nunc, eget luctus velit placerat sed. Curabitur sit amet nisl vel sapien efficitur sagittis. Aliquam dapibus leo ante, ut convallis leo egestas a.
-                </p>
-                <!-- Close -->
-                <div class="grid">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div>
-                        <button class="close-dialog" aria-label="Valider">Fermer</button>
-                    </div>
+        </section>
+        <!-- Return -->
+        <section>
+            <div class="grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>
+                    <button id="back-btn" class="back" aria-label="Valider">Retour</button>
                 </div>
-            </main>
-        </article>
-    </dialog>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        Designed by Loquicom 2022, with <a href="https://picocss.com" target="_self">Pico CSS</a>, <a href="https://micku7zu.github.io/vanilla-tilt.js/" target="_self">Vanilla-Tilt</a> and <a href="https://materialdesignicons.com/" target="_self">Material Design Icons</a>. Code available <a href="https://github.com/Loquicom/linktree" target="_self">here</a> under MIT
+    </footer>
 
     <script type="text/javascript" src="static/js/theme-switcher.min.js"></script>
-    <script type="text/javascript" src="static/js/color-picker.js"></script>
-    <script type="text/javascript" src="static/js/vanilla-tilt.min.js"></script>
-    <script type="text/javascript" src="static/js/konami.js"></script>
-    <script type="text/javascript" src="static/js/script.js"></script>
+    <script type="text/javascript" src="static/js/legal.js"></script>
 </body>
 </html>

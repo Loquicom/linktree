@@ -1,0 +1,17 @@
+main {
+  max-height: 85vh;
+}
+
+footer {
+  padding-right: 6em !important;
+}
+
+#back-nav {
+  cursor: pointer;
+  font-size: 1.5em;
+  margin-right: 1em;
+}
+
+#back-nav:hover {
+  opacity: 0.8;
+}

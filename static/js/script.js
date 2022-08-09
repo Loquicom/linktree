@@ -114,7 +114,7 @@ function manageLink(enable) {
         if (dialogSupported()) {
             legalDialog.open = true;
         } else {
-            alert('Votre navigateur n\'est pas compatible. Merci d\'en télécharger un plus récent.');
+            location.href = './legal.html';
         }
     });
     const closeLegalDialog = document.querySelectorAll('#legal-dialog .close-dialog');
