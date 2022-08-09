@@ -155,6 +155,10 @@ footer {
 
 /* --- Link --- */
 
+#links {
+    margin-bottom: 0;
+}
+
 .link {
     text-align: center;
     padding: 0;
@@ -209,4 +213,39 @@ footer {
 
 .animation a:hover {
     background-position: 100% 55%;
+}
+
+/* --- Legal --- */
+
+#legal {
+    text-align: center;
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+
+#legal span {
+    cursor: pointer;
+    color: var(--primary);
+}
+
+#legal span:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+#legal-dialog article {
+    max-width: 75vw;
+    max-height: 90vh;
+    overflow-y: hidden;
+}
+
+#legal-dialog article header {
+    margin-bottom: 0;
+}
+
+#legal-text {
+    margin-bottom: 1em;
+    max-height: 60vh;
+    overflow-y: scroll;
+    padding: 0 0.5em 0 0.5em;
 }

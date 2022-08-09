@@ -63,7 +63,7 @@ function manageLink(enable) {
         }
         // Link + Init
         localStorage.setItem('preferedLink', false);
-        localStorage.setItem('init', true);;
+        localStorage.setItem('init', true);
     }
     // Apply values
     manageAnimation(parseBoolean(localStorage.getItem('preferedAnimation')));
@@ -80,8 +80,8 @@ function manageLink(enable) {
             alert('Votre navigateur n\'est pas compatible. Merci d\'en télécharger un plus récent.');
         }
     });
-    const closeDialog = document.querySelectorAll('#parameter-dialog .close-dialog');
-    for(const elt of closeDialog) {
+    const closeParameterDialog = document.querySelectorAll('#parameter-dialog .close-dialog');
+    for(const elt of closeParameterDialog) {
         elt.addEventListener('click', function() {
             parameterDialog.open = false;
         });
@@ -105,6 +105,24 @@ function manageLink(enable) {
         localStorage.clear();
         location.reload();
     });
+
+    /* --- Legal Dialog --- */
+
+    // Open/Close dialog
+    const legalDialog = document.querySelector('#legal-dialog');
+    document.querySelector('#legal span').addEventListener('click', function() {
+        if (dialogSupported()) {
+            legalDialog.open = true;
+        } else {
+            alert('Votre navigateur n\'est pas compatible. Merci d\'en télécharger un plus récent.');
+        }
+    });
+    const closeLegalDialog = document.querySelectorAll('#legal-dialog .close-dialog');
+    for(const elt of closeLegalDialog) {
+        elt.addEventListener('click', function() {
+            legalDialog.open = false;
+        });
+    }
 
     /* --- Konami Code --- */
 
