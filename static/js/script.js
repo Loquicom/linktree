@@ -53,21 +53,21 @@ function manageLink(enable) {
     if (!localStorage.getItem('init')) {
         // Animation
         if (dialogSupported()) {
-            localStorage.setItem('preferedAnimation', true);
+            localStorage.setItem('preferredAnimation', 'true');
         } else {
-            localStorage.setItem('preferedAnimation', false);
+            localStorage.setItem('preferredAnimation', 'false');
         }
         // Reduce animation
         if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            localStorage.setItem('preferedAnimation', false);
+            localStorage.setItem('preferredAnimation', 'false');
         }
         // Link + Init
-        localStorage.setItem('preferedLink', false);
-        localStorage.setItem('init', true);
+        localStorage.setItem('preferredLink', 'false');
+        localStorage.setItem('init', 'true');
     }
     // Apply values
-    manageAnimation(parseBoolean(localStorage.getItem('preferedAnimation')));
-    manageLink(parseBoolean(localStorage.getItem('preferedLink')));
+    manageAnimation(parseBoolean(localStorage.getItem('preferredAnimation')));
+    manageLink(parseBoolean(localStorage.getItem('preferredLink')));
     
     /* --- Parameters Dialog --- */
 
@@ -88,16 +88,16 @@ function manageLink(enable) {
     }
     // Set parameters value
     const switchAnimation = document.querySelector('#switch-animation');
-    switchAnimation.checked = parseBoolean(localStorage.getItem('preferedAnimation'));
+    switchAnimation.checked = parseBoolean(localStorage.getItem('preferredAnimation'));
     const switchLink = document.querySelector('#switch-link');
-    switchLink.checked = parseBoolean(localStorage.getItem('preferedLink'));
+    switchLink.checked = parseBoolean(localStorage.getItem('preferredLink'));
     // Parameters change
     switchAnimation.addEventListener('change', function() {
-        localStorage.setItem('preferedAnimation', switchAnimation.checked);
+        localStorage.setItem('preferredAnimation', '' + switchAnimation.checked);
         manageAnimation(switchAnimation.checked);
     });
     switchLink.addEventListener('change', function() {
-        localStorage.setItem('preferedLink', switchLink.checked);
+        localStorage.setItem('preferredLink', '' + switchLink.checked);
         manageLink(switchLink.checked);
     });
     // Reset
@@ -132,7 +132,7 @@ function manageLink(enable) {
         if (easterEggInterval === null) {
             // Sound
             new Promise((resolve, reject) => {
-                var audio = new Audio('./static/sound/rainbow.mp3');
+                const audio = new Audio('./static/sound/rainbow.mp3');
                 audio.play();
             });
             // Init

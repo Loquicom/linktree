@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,36 @@
     <link rel="stylesheet" href="static/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="static/css/style.css">
 
-    <style id="color-style"></style>
+    <style id="color-style">
+        [data-theme="light"],
+        :root:not([data-theme="dark"]) {
+            --primary: #ffb300;
+            --primary-hover: #ffa000;
+            --primary-focus: rgba(255, 179, 0, 0.125);
+            --primary-inverse: rgba(0, 0, 0, 0.75);
+        }
+        @media only screen and (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --primary: #ffb300;
+                --primary-hover: #ffc107;
+                --primary-focus: rgba(255, 179, 0, 0.25);
+                --primary-inverse: rgba(0, 0, 0, 0.75);
+            }
+        }
+        [data-theme="dark"] {
+            --primary: #ffb300;
+            --primary-hover: #ffc107;
+            --primary-focus: rgba(255, 179, 0, 0.25);
+            --primary-inverse: rgba(0, 0, 0, 0.75);
+        }
+        :root {
+            --form-element-active-border-color: var(--primary);
+            --form-element-focus-color: var(--primary-focus);
+            --switch-color: var(--primary-inverse);
+            --switch-checked-background-color: var(--primary);
+            --link-button-background: url("data:image/svg+xml,%3Csvg width='800px' height='700px' viewBox='0 0 800 70' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' %3E %3Cg id='a' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' %3E %3Cpolygon id='b' fill='%23ffb300' points='0 32.8554687 0 129.190599 799.859707 129.190599 799.859707 0.105040791' %3E %3C/polygon %3E %3C/g %3E %3C/svg %3E");
+        }
+    </style>
 
     <script type="text/javascript" src="static/js/color-picker.head.js"></script>
 
@@ -127,15 +156,13 @@
                 Param&egrave;tres
             </header>
             <!-- Description -->
-            <main class="container">
-                <p>
-                    R&eacute;gler les différents param&egrave;tres de la page :
-                    <ul>
-                        <li>Animation : Permet d&apos;activer/d&eacute;sactiver les effets au survol des liens avec la souris</li>
-                        <li>Nouvel onglet : Permet d'ouvrir les liens dans un nouvel onglet (et non dans l'onglet courant)</li>
-                    </ul>
-                    Aucune donn&eacute;e n&apos;est envoy&eacute;e &agrave; un serveur, tout est sauvegard&eacute; localement dans votre navigateur.
-                </p>
+            <div class="container">
+                R&eacute;gler les différents param&egrave;tres de la page :
+                <ul>
+                    <li>Animation : Permet d&apos;activer/d&eacute;sactiver les effets au survol des liens avec la souris</li>
+                    <li>Nouvel onglet : Permet d'ouvrir les liens dans un nouvel onglet (et non dans l'onglet courant)</li>
+                </ul>
+                Aucune donn&eacute;e n&apos;est envoy&eacute;e &agrave; un serveur, tout est sauvegard&eacute; localement dans votre navigateur.
                 <!-- Params -->
                 <hr>
                 <div id="parameter-switch" class="grid center">
@@ -165,7 +192,7 @@
                 <footer id="parameter-reset">
                     Pour supprimer vos pr&eacute;f&eacute;rences <span id="parameter-reset-button">cliquer ici</span>
                 </footer>
-            </main>
+            </div>
         </article>
     </dialog>
 
@@ -178,7 +205,7 @@
                 Mentions l&eacute;gales <a href="legal.html" target="_self"><span class="mdi mdi-open-in-new"></span></a>
             </header>
             <!-- Description -->
-            <main class="container">
+            <div class="container">
                 <p id="legal-text">     
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus felis enim, pellentesque sit amet posuere id, interdum quis nulla. Sed felis mi, hendrerit eu eros dictum, commodo hendrerit augue. Aliquam ex lacus, laoreet vel enim id, imperdiet mattis metus. Maecenas molestie lacus ut est pellentesque molestie. Proin id sem ac urna fermentum ultrices a non leo. Etiam ut ultricies quam. Praesent sodales, purus eu dapibus fermentum, lorem ligula luctus mi, in vulputate eros justo in lacus.
 
@@ -229,7 +256,7 @@ Donec vel ante ac massa dapibus rutrum. In hac habitasse platea dictumst. Phasel
                         <button class="close-dialog" aria-label="Valider">Fermer</button>
                     </div>
                 </div>
-            </main>
+            </div>
         </article>
     </dialog>
 

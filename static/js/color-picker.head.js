@@ -157,7 +157,7 @@ function getColorCodes(color) {
             };
             break;
         default:
-            throw "Unknow color";
+            throw "Unknown color";
     }
     data['primaryFocusLight'] = convertHex(data.primary, 0.125)
     data['primaryFocusDark'] = convertHex(data.primary, 0.25)
@@ -197,5 +197,5 @@ function getCssColor(colorData) {
     `;
 }
 
-let color = localStorage.getItem('preferedColor') ? localStorage.getItem('preferedColor') : 'blue';
+let color = localStorage.getItem('preferredColor') ? localStorage.getItem('preferredColor') : 'blue';
 document.querySelector('#color-style').innerHTML = getCssColor(getColorCodes(color));

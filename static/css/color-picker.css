@@ -27,8 +27,7 @@
 
 #color-picker button {
     margin-bottom: 0;
-    padding: 0;
-    padding-top: 100%;
+    padding: 100% 0 0;
     border: none;
     border-radius: 0;
 }
@@ -45,7 +44,7 @@
     visibility: hidden;
 }
 
-#color-picked div.hover {
+#color-picked div:hover {
     visibility: visible;
     opacity: 0.6;
 }

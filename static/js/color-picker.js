@@ -23,15 +23,15 @@ function getCurrentColor() {
 
     /* --- Default value --- */
 
-    if (!localStorage.getItem('preferedColor')) {
-        localStorage.setItem('preferedColor', 'blue');
+    if (!localStorage.getItem('preferredColor')) {
+        localStorage.setItem('preferredColor', 'blue');
     }
 
     /* --- Load color --- */
 
-    getColorPicker(localStorage.getItem('preferedColor')).classList.add('picked');
-    getColorPicked(localStorage.getItem('preferedColor')).classList.add('picked');
-    document.querySelectorAll('.link').forEach((elt) => elt.setAttribute('data-color', localStorage.getItem('preferedColor')));
+    getColorPicker(localStorage.getItem('preferredColor')).classList.add('picked');
+    getColorPicked(localStorage.getItem('preferredColor')).classList.add('picked');
+    document.querySelectorAll('.link').forEach((elt) => elt.setAttribute('data-color', localStorage.getItem('preferredColor')));
 
     /* --- Interaction --- */
 
@@ -50,7 +50,7 @@ function getCurrentColor() {
         });
         // Change color
         elt.addEventListener('click', function() {
-            // Read current color informations
+            // Read current color information
             const data = getCurrentColor();
             // If color change
             if (data.color !== color) {
@@ -64,7 +64,7 @@ function getCurrentColor() {
                 // Change the color on the link
                 document.querySelectorAll('.link').forEach((elt) => elt.setAttribute('data-color', color));
                 // Set the new color in localStorage
-                localStorage.setItem('preferedColor', color);
+                localStorage.setItem('preferredColor', color);
             }
         });
     }
